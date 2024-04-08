@@ -7,3 +7,4 @@
 - Clerk
 
 - [Kenny for assets](https://kenney.nl/assets)
+- [FlagPack for assets](https://flagpack.xyz/)
