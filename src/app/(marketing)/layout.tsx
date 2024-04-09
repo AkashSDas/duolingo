@@ -3,7 +3,7 @@ import { Header } from "./header";
 
 type Props = React.PropsWithChildren<{}>;
 
-export default function MarketingPageLayout(props: Props): React.JSX.Element {
+export default function MarketingGroupLayout(props: Props): React.JSX.Element {
     return (
         <div className="min-h-screen flex flex-col">
             <Header />
