@@ -1,8 +1,11 @@
-import { getCourses } from "@app/db/queries";
+import { getCourses, getUserProgress } from "@app/db/queries";
 import { List } from "./list";
 
 export default async function CoursePage(): Promise<React.JSX.Element> {
-    const courses = await getCourses();
+    const [courses, userProgress] = await Promise.all([
+        getCourses(),
+        getUserProgress(),
+    ]);
 
     return (
         <div className="h-full max-w-[912px] px-3 mx-auto">
@@ -12,7 +15,7 @@ export default async function CoursePage(): Promise<React.JSX.Element> {
 
             <List
                 courses={courses}
-                activeCourseId={"90404702-5914-48ad-b24b-fd1ec6fd5aee"}
+                activeCourseId={userProgress?.activeCourseId}
             ></List>
         </div>
     );

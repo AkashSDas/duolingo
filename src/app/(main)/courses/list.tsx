@@ -5,7 +5,7 @@ import { Card } from "./card";
 
 type Props = {
     courses: (typeof courses.$inferSelect)[];
-    activeCourseId: (typeof courses.$inferSelect)["id"];
+    activeCourseId: (typeof courses.$inferSelect)["id"] | undefined | null;
 };
 
 export function List(props: Props) {
